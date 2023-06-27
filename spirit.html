@@ -45,8 +45,12 @@
         color: #ff0;
     }
     audio {
-      position: absolute;
-      top: 300000px;
+    }
+    .quote {
+      font-size: 24px;
+          /* 7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7        --> */
+      margin-top: 30px;
+          /* 7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7       7        --> */
     }
   </style>
 </head>
@@ -55,11 +59,29 @@
 777 blog hosted by ic3b on vallata.cc's wonderful servers, with valuable information and ressources. It 𝘄𝗶𝗹𝗹 improve 𝘆𝗼𝘂!
     <h2 class="post-title">The Soul</h2>
     <div class="post-meta">Posted on June 27, 2023, 5:06 AM by User <a href="redacted.html">ic3b</a></div>
+    <audio id='music' controls autoplay>
+
+      <source src="" type="audio/mpeg">
+    
+    </audio>
+    
+      <script>
+        function myFunction() {
+           fileArray = ["Anemone.mp3", "Open Heart Surgery.mp3"];
+           var num = Math.floor(Math.random() * fileArray.length);
+           var x = document.getElementById("music");
+           x.src = fileArray[num]; 
+    
+           var audio = document.getElementById("music");
+           audio.volume = 0.2;
+           audio.autoplay = true;
+           audio.load();
+        }
+    
+        myFunction()
+    
+      </script>
     <div class="post-content">
-        <audio controls autoplay>
-            <source src="Open Heart Surgery.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
       <p>The world is full of beings who do terrible things. Why not terminate them? Exactly, that would be immoral. <br>
     But what are morals? Morals are your brain trying to protect your soul from getting infected. <br>
  <b>You</b> are your soul, not your body. Your body is mortal but your soul isn't. This is the reason why you likely do not commit terrible acts. <br>
@@ -94,5 +116,16 @@ If something brings you positivy, do it, no matter what. Do not let anyone tell 
       
     </div>
   </div>
+  <script>
+    var quotes = [
+      "Anemone.mp3",
+      "Open Heart Surgery.mp3",
+    ];
+
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    var quoteElement = document.getElementById("quote");
+    quoteElement.textContent = randomQuote;
+  </script>
 </body>
+
 </html>
